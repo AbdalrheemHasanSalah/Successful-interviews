@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقابلات ناجحة - دليلك الشامل للنجاح في المقابلات الوظيفية</title>
+    <meta name="description" content="دليلك الشامل للنجاح في المقابلات الوظيفية واكتساب الثقة للحصول على وظيفة أحلامك. نصائح، أسئلة شائعة، وإرشادات للمظهر المناسب.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body dir="rtl">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>مقابلات ناجحة</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#tips" class="nav-link">النصائح</a>
+                <a href="#questions" class="nav-link">الأسئلة</a>
+                <a href="#dress" class="nav-link">المظهر</a>
+                <a href="#mistakes" class="nav-link">الأخطاء</a>
+                <a href="#video" class="nav-link">المقابلات المرئية</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">مقابلات ناجحة</h1>
+            <p class="hero-subtitle">دليلك الشامل للنجاح في المقابلات الوظيفية واكتساب الثقة للحصول على وظيفة أحلامك</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('tips')">ابدأ التحضير الآن</button>
+                <button class="btn btn-secondary" onclick="showRandomQuestion()">سؤال عشوائي</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <h2>ابحث عن سؤال معين</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="اكتب السؤال الذي تبحث عنه..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section">
+        <div class="container">
+            <h2 class="section-title">نصائح قبل المقابلة</h2>
+            <p class="section-subtitle">التحضير المسبق هو مفتاح النجاح في أي مقابلة وظيفية</p>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-search tip-icon"></i>
+                    <h3>ابحث عن الشركة</h3>
+                    <p>اقرأ عن تاريخ الشركة، قيمها، ومنتجاتها. هذا سيساعدك في الإجابة على الأسئلة بشكل أفضل.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-file-alt tip-icon"></i>
+                    <h3>راجع سيرتك الذاتية</h3>
+                    <p>كن مستعداً للحديث عن كل نقطة في سيرتك الذاتية بالتفصيل والأمثلة العملية.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-clock tip-icon"></i>
+                    <h3>اصل مبكراً</h3>
+                    <p>الوصول قبل 10-15 دقيقة من الموعد يعطي انطباعاً إيجابياً عن احترافيتك.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-question-circle tip-icon"></i>
+                    <h3>حضر أسئلتك</h3>
+                    <p>اجعل لديك أسئلة ذكية عن الوظيفة والشركة لتظهر اهتمامك الحقيقي.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-handshake tip-icon"></i>
+                    <h3>تدرب على المصافحة</h3>
+                    <p>مصافحة قوية وثابتة مع تواصل بصري تترك انطباعاً إيجابياً منذ اللحظة الأولى.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-copy tip-icon"></i>
+                    <h3>اطبع الوثائق</h3>
+                    <p>أحضر نسخاً إضافية من سيرتك الذاتية وأي وثائق أخرى قد تحتاجها.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section id="questions" class="section">
+        <div class="container">
+            <h2 class="section-title">أسئلة شائعة وإجابات احترافية</h2>
+            <p class="section-subtitle">تدرب على هذه الأسئلة الشائعة واحفظ إجابات مميزة لها</p>
+            <div class="questions-container" id="questionsContainer">
+                <!-- Questions will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Section -->
+    <section id="dress" class="section">
+        <div class="container">
+            <h2 class="section-title">ماذا ترتدي؟</h2>
+            <p class="section-subtitle">المظهر المناسب يعزز ثقتك ويترك انطباعاً إيجابياً</p>
+            <div class="dress-grid">
+                <div class="dress-card">
+                    <i class="fas fa-male dress-icon"></i>
+                    <h3>للرجال</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> بدلة رسمية داكنة (أزرق داكن أو رمادي أو أسود)</li>
+                        <li><i class="fas fa-check-circle"></i> قميص أبيض أو أزرق فاتح مكوي جيداً</li>
+                        <li><i class="fas fa-check-circle"></i> ربطة عنق محافظة تتناسب مع البدلة</li>
+                        <li><i class="fas fa-check-circle"></i> حذاء جلدي أسود أو بني نظيف ومصقول</li>
+                        <li><i class="fas fa-check-circle"></i> جوارب داكنة تتناسب مع الحذاء</li>
+                        <li><i class="fas fa-check-circle"></i> شعر مهندم ونظيف</li>
+                    </ul>
+                </div>
+                <div class="dress-card">
+                    <i class="fas fa-female dress-icon"></i>
+                    <h3>للنساء</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> عباءة أنيقة أو فستان محتشم</li>
+                        <li><i class="fas fa-check-circle"></i>  ثوب واسع محتشم أو فستان طويل</li>
+                        <li><i class="fas fa-check-circle"></i> بلوزة محتشمة بألوان هادئة</li>
+                        <li><i class="fas fa-check-circle"></i> حجاب أنيق يغطي الشعر والعنق</li>
+                        <li><i class="fas fa-check-circle"></i> حذاء مغلق بكعب منخفض أو متوسط</li>
+                        <li><i class="fas fa-check-circle"></i> إكسسوارات بسيطة وأنيقة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="additional-tips">
+                <i class="fas fa-lightbulb"></i>
+                <h4>نصائح إضافية:</h4>
+                <ul>
+                    <li>اختر ملابس مريحة تشعرك بالثقة</li>
+                    <li>تأكد من نظافة وكي الملابس جيداً</li>
+                    <li>تجنب العطور القوية أو المبالغ فيها</li>
+                    <li>احرص على نظافة الأظافر والشعر</li>
+                    <li>جرب الملابس مسبقاً للتأكد من المقاس والراحة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mistakes Section -->
+    <section id="mistakes" class="section">
+        <div class="container">
+            <h2 class="section-title">أخطاء يجب تجنبها</h2>
+            <p class="section-subtitle">تجنب هذه الأخطاء الشائعة لتضمن نجاح مقابلتك</p>
+            <div class="mistakes-grid">
+                <div class="mistake-card">
+                    <i class="fas fa-clock mistake-icon"></i>
+                    <h3>التأخير</h3>
+                    <p>الوصول متأخراً يعطي انطباعاً سيئاً عن عدم الاحترافية. خطط للوصول مبكراً بـ 10-15 دقيقة.</p>
+                </div>
+                <div class="mistake-card">
+                    <i class="fas fa-mobile-alt mistake-icon"></i>
+                    <h3>عدم إغلاق الهاتف</h3>
+                    <p>أغلق الهاتف تماماً أو ضعه في الوضع الصامت. أي مقاطعة ستؤثر سلباً على تركيزك.</p>
+                </div>
+                <div class="mistake-card">
+                    <i class="fas fa-search-minus mistake-icon"></i>
+                    <h3>عدم البحث عن الشركة</h3>
+                    <p>عدم معرفة أساسيات الشركة يظهر عدم الاهتمام الحقيقي بالوظيفة.</p>
+                </div>
+                <div class="mistake-card">
+                    <i class="fas fa-frown mistake-icon"></i>
+                    <h3>انتقاد صاحب العمل السابق</h3>
+                    <p>تجنب الحديث السلبي عن الوظائف أو المدراء السابقين، حتى لو كانت التجربة سيئة.</p>
+                </div>
+                <div class="mistake-card">
+                    <i class="fas fa-dollar-sign mistake-icon"></i>
+                    <h3>التركيز على الراتب فقط</h3>
+                    <p>لا تبدأ بالسؤال عن الراتب والمزايا. ركز أولاً على ما يمكنك تقديمه للشركة.</p>
+                </div>
+                <div class="mistake-card">
+                    <i class="fas fa-question mistake-icon"></i>
+                    <h3>عدم طرح أسئلة</h3>
+                    <p>عدم وجود أسئلة يظهر عدم الاهتمام. اطرح أسئلة ذكية عن الوظيفة والشركة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="section">
+        <div class="container">
+            <h2 class="section-title">المقابلات المرئية</h2>
+            <p class="section-subtitle">نصائح خاصة للنجاح في المقابلات عبر الفيديو</p>
+            <div class="video-content">
+                <div class="video-grid">
+                    <div class="video-category">
+                        <h3>التحضيرات التقنية</h3>
+                        <ul>
+                            <li><i class="fas fa-wifi"></i> تأكد من قوة واستقرار الإنترنت</li>
+                            <li><i class="fas fa-video"></i> اختبر الكاميرا والميكروفون مسبقاً</li>
+                            <li><i class="fas fa-battery-full"></i> تأكد من شحن الجهاز أو توصيله بالكهرباء</li>
+                            <li><i class="fas fa-download"></i> حمّل التطبيق المطلوب وجربه</li>
+                            <li><i class="fas fa-eye"></i> ضع الكاميرا على مستوى العين</li>
+                        </ul>
+                    </div>
+                    <div class="video-category">
+                        <h3>البيئة المحيطة</h3>
+                        <ul>
+                            <li><i class="fas fa-home"></i> اختر خلفية محايدة ونظيفة</li>
+                            <li><i class="fas fa-sun"></i> تأكد من الإضاءة الجيدة على وجهك</li>
+                            <li><i class="fas fa-volume-mute"></i> اختر مكاناً هادئاً بدون مقاطعات</li>
+                            <li><i class="fas fa-door-closed"></i> أخبر الآخرين بموعد المقابلة لتجنب المقاطعة</li>
+                            <li><i class="fas fa-chair"></i> اجلس على كرسي مريح ومستقر</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video-tips">
+                    <h3>أثناء المقابلة</h3>
+                    <div class="video-tips-grid">
+                        <div class="video-tip">
+                            <i class="fas fa-eye"></i>
+                            <h4>التواصل البصري</h4>
+                            <p>انظر للكاميرا وليس للشاشة لمحاكاة التواصل البصري</p>
+                        </div>
+                        <div class="video-tip">
+                            <i class="fas fa-microphone"></i>
+                            <h4>الصوت الواضح</h4>
+                            <p>تحدث بوضوح وبسرعة مناسبة لتجنب التأخير</p>
+                        </div>
+                        <div class="video-tip">
+                            <i class="fas fa-user-tie"></i>
+                            <h4>المظهر المهني</h4>
+                            <p>البس ملابس مهنية كاملة حتى لو كانت من أعلى فقط</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>مقابلات ناجحة</h3>
+                <p>دليلك الشامل للنجاح في المقابلات الوظيفية</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abdalrheem-salah-416484314" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 مقابلات ناجحة. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Random Question Modal -->
+    <div id="randomQuestionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>سؤال عشوائي</h3>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="randomQuestionContent">
+                    <!-- Random question content will be loaded here -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="showRandomQuestion()">سؤال جديد</button>
+                    <button class="btn btn-secondary" onclick="closeModal()">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/myscript.js"></script>
+</body>
+</html>
